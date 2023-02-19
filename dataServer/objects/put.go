@@ -1,7 +1,6 @@
-package objects
+package dataServer
 
 import (
-	"distributeOSD/util"
 	"io"
 	"log"
 	"net/http"
@@ -10,7 +9,7 @@ import (
 )
 
 func put(w http.ResponseWriter, r *http.Request) {
-	f, e := os.Create(util.Pconfig.StorageRoot + "/objects/" +
+	f, e := os.Create(os.Getenv("STORAGE_ROOT") + "/objects/" +
 		strings.Split(r.URL.EscapedPath(), "/")[2])
 	if e != nil {
 		log.Println(e)

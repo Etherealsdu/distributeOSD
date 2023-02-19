@@ -11,13 +11,11 @@ type Config struct {
 	StorageRoot   string `mapstructure:STORAGE_ROOT`
 }
 
-var Pconfig *Config
-
 // LoadConfig reads configuration from file or environment variables.
-func LoadConfig(path string) (config *Config, err error) {
+func LoadConfig(path string, configName string, configType string) (config *Config, err error) {
 	viper.AddConfigPath(path)
-	viper.SetConfigName("app")
-	viper.SetConfigType("env")
+	viper.SetConfigName(configName)
+	viper.SetConfigType(configType)
 
 	viper.AutomaticEnv()
 
