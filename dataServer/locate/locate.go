@@ -1,7 +1,7 @@
 package locate
 
 import (
-	"distributeOSD/util/rabbitmq"
+	"distributeOSD/utils/rabbitmq"
 	"os"
 	"strconv"
 )

@@ -2,7 +2,7 @@ package objects
 
 import (
 	"distributeOSD/apiServer/locate"
-	"distributeOSD/util/objectstream"
+	"distributeOSD/utils/objectstream"
 	"fmt"
 	"io"
 )

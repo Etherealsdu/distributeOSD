@@ -2,7 +2,7 @@ package objects
 
 import (
 	"distributeOSD/apiServer/heartbeat"
-	"distributeOSD/util/objectstream"
+	"distributeOSD/utils/objectstream"
 	"fmt"
 )
 
